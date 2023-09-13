@@ -26,15 +26,15 @@
     </section>
 </template>
 
-<script>
+<script setup>
 import HeroCard from './HeroCard.vue';
 
-export default {
-    name: 'HeroSection',
-    components: {
-        HeroCard
-    }
-}
+// export default {
+//     name: 'HeroSection',
+//     components: {
+//         HeroCard
+//     }
+// }
 </script>
 
 <style scoped>

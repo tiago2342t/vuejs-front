@@ -48,29 +48,7 @@
     </section>
 </template>
 
-<script>
-export default {
-    name: 'HeroCard',
-    data() {
-        return {
-            options: [
-                {
-                    name: 'Location',
-                    text: 'Where are you going'
-                },
-                {
-                    name: 'Date',
-                    text: 'When you will go'
-                },
-                {
-                    name: 'Guest',
-                    text: 'Number of guest'
-                },
-            ]
-        }
-    },
-}
-</script>
+<script setup></script>
 
 <style scoped>
 #carta-flotante {
