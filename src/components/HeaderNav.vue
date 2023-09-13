@@ -7,9 +7,6 @@
                     alt="Logo de Trabook"
                 />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="navbar-collapse collapse" id="myNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -35,6 +32,9 @@
                 <button type="button" id="login" class="btn">Login</button>
                 <button type="button" id="sign-up" class="btn">Sign Up</button>
             </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
 </template>
