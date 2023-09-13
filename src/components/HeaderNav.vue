@@ -1,6 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg" aria-label="Eighth navbar example">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand" href="#">
                 <img
                     src="../assets/img/Logo.png"
@@ -28,13 +31,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="justify-content-end align-items-center">
+            <div class="align-items-center justify-content-lg-end justify-content-sm-center">
                 <button type="button" id="login" class="btn">Login</button>
                 <button type="button" id="sign-up" class="btn">Sign Up</button>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
     </nav>
 </template>
