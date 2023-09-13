@@ -39,7 +39,11 @@
     </nav>
 </template>
 
-<script setup></script>
+<script>
+export default {
+    name: 'HeaderNav'
+}
+</script>
 
 <style scoped>
 .navbar-collapse {
