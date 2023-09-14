@@ -49,10 +49,14 @@
     background-color: #f7f8fc;
 }
 
-.centered-title {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+.card-title, .centered-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: #222;
+}
+
+.centered-title {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 6vh;
     text-align: center;
 }
