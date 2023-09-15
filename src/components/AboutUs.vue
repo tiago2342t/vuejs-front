@@ -41,6 +41,10 @@
 <script setup></script>
 
 <style scoped>
+#about-us {
+    margin-top: -2.5rem;
+}
+
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-weight: bold;

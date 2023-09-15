@@ -10,6 +10,7 @@
       <OurBlog/>
       <SuscriptionForm/>
     </main>
+    <TheFooter/>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import VacationPlan from './components/VacationPlan.vue';
 import AboutUs from './components/AboutUs.vue';
 import OurBlog from './components/OurBlog.vue';
 import SuscriptionForm from './components/SuscriptionForm.vue';
+import TheFooter from './components/TheFooter.vue';
 
 // export default {
 //   name: 'App',

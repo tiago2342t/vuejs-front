@@ -90,7 +90,7 @@
 
 <style scoped>
 #blog {
-    margin: -10rem 0 5rem 0;
+    margin: -5rem 0 5rem 0;
 }
 
 .fila {
