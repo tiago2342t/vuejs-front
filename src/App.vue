@@ -5,6 +5,7 @@
       <HeroSection/>
       <ListDo/>
       <DealsDiscounts/>
+      <VacationPlan/>
     </main>
   </div>
 </template>
@@ -14,12 +15,13 @@ import HeaderNav from './components/HeaderNav.vue';
 import HeroSection from './components/HeroSection.vue';
 import ListDo from './components/ListDo.vue';
 import DealsDiscounts from './components/DealsDiscounts.vue';
+import VacationPlan from './components/VacationPlan.vue';
 
 // export default {
 //   name: 'App',
 //   components: {
 //     HeaderNav,
-//     HeroSection
+//     HeroSection,
 //   }
 // }
 </script>
