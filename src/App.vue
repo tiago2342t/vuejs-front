@@ -6,6 +6,7 @@
       <ListDo/>
       <DealsDiscounts/>
       <VacationPlan/>
+      <AboutUs/>
     </main>
   </div>
 </template>
@@ -16,6 +17,7 @@ import HeroSection from './components/HeroSection.vue';
 import ListDo from './components/ListDo.vue';
 import DealsDiscounts from './components/DealsDiscounts.vue';
 import VacationPlan from './components/VacationPlan.vue';
+import AboutUs from './components/AboutUs.vue';
 
 // export default {
 //   name: 'App',
@@ -26,7 +28,7 @@ import VacationPlan from './components/VacationPlan.vue';
 // }
 </script>
 
-<style scoped>
+<style>
 #app {
   background-color: #fefcfb;
 }
