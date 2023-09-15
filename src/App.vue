@@ -7,6 +7,8 @@
       <DealsDiscounts/>
       <VacationPlan/>
       <AboutUs/>
+      <OurBlog/>
+      <SuscriptionForm/>
     </main>
   </div>
 </template>
@@ -18,6 +20,8 @@ import ListDo from './components/ListDo.vue';
 import DealsDiscounts from './components/DealsDiscounts.vue';
 import VacationPlan from './components/VacationPlan.vue';
 import AboutUs from './components/AboutUs.vue';
+import OurBlog from './components/OurBlog.vue';
+import SuscriptionForm from './components/SuscriptionForm.vue';
 
 // export default {
 //   name: 'App',

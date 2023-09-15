@@ -50,7 +50,6 @@
 }
 
 .card-title, .centered-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: #222;
 }
@@ -59,6 +58,10 @@
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-size: 6vh;
     text-align: center;
+}
+
+.card-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .resaltar {
