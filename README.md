@@ -1,6 +1,10 @@
-# front-vue
+# Trabook Frontend
 
-Frontend part of final workshop
-Vue JS 2 & Bootstrap
+Frontend part of final workshop.
 
-### [Backend here](https://github.com/Adoration4None/trabook-backend)
+### Technologies used:
+- `Vue.js`
+- `Bootstrap`
+
+
+> ### [Backend here (Django)](https://github.com/Adoration4None/trabook-backend)
