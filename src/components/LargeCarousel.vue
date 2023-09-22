@@ -4,23 +4,24 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex justify-content-around">
-                        <div class="card discounts-carousel-card">
+                        
+                        <div class="card discounts-carousel-card" v-for="destination in destinations.slice(4, 8)" :key="destination.id">
                             <img src="../assets/img/madrid1.png" class="card-img-top rounded carousel-img" alt="Madrid"/>
                             <div class="card-body">
                                 <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Madrid</h5>
+                                    <h5 class="card-title col">{{ destination.name }}</h5>
                                     <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
                                     <p class="mx-2 d-flex justify-content-end">4.8</p>
                                 </div>
                                 <div class="d-flex align-content-center justify-content-end">
                                     <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">Spain</p>
+                                    <p class="card-text col">{{ getCountry(destination.country).name }}</p>
                                     <p class="card-text tachado mx-3">$950</p>
                                     <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
                                 </div>
                             </div>
                         </div>
-                        <div class="card discounts-carousel-card">
+                        <!-- <div class="card discounts-carousel-card">
                             <img src="../assets/img/firenze1.png" class="card-img-top rounded carousel-img" alt="Firenze"/>
                             <div class="card-body">
                                 <div class="d-flex align-content-center justify-content-end">
@@ -67,7 +68,7 @@
                                     <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -153,7 +154,51 @@
     </div>
 </template>
 
-<script setup></script>
+<script>
+import axios from 'axios';
+const destinationsUrl = 'http://localhost:8000/api/v1/destinations/?format=json';
+const countriesUrl = 'http://localhost:8000/api/v1/countries/?format=json';
+
+export default {
+    data() {
+        return {
+            destinations: [],
+            countries: []
+        }
+    },
+    mounted() {
+        this.getDestinations();
+        this.getCountries();
+    },
+    methods: {
+        getDestinations() {
+            axios.get(destinationsUrl)
+                .then( response => {
+                    console.log(response.data);
+                    this.destinations = response.data;
+                } )
+                .catch( e => console.log('Error getting data from API: ', e));
+        },
+
+        getCountries() {
+            axios.get(countriesUrl)
+                .then( response => {
+                    console.log(response.data);
+                    this.countries = response.data;
+                } )
+                .catch( e => console.log('Error getting data from API: ', e));
+        },
+
+        getCountry(id) {
+            return this.countries[id-1];
+        }
+
+    }
+}
+
+</script>
+
+
 
 <style scoped>
 p {
