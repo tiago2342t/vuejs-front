@@ -3,7 +3,7 @@
 Frontend part of final workshop.
 
 ### Technologies used:
-- `Vue.js`
+- `Vue.js 2`
 - `Bootstrap`
 
 

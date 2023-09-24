@@ -5,70 +5,23 @@
                 <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex justify-content-around">
                         
-                        <div class="card discounts-carousel-card" v-for="destination in destinations.slice(4, 8)" :key="destination.id">
-                            <img src="../assets/img/madrid1.png" class="card-img-top rounded carousel-img" alt="Madrid"/>
+                        <div class="card discounts-carousel-card" v-for="plan in plans.slice(0, 5)" :key="plan.id">
+                            <img :src="getDestinationFromPlan(plan.destination).image" class="card-img-top rounded carousel-img" :alt="getDestinationFromPlan(plan.destination).name"/>
                             <div class="card-body">
                                 <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">{{ destination.name }}</h5>
+                                    <h5 class="card-title col">{{ getDestinationFromPlan(plan.destination).name }}</h5>
                                     <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
                                     <p class="mx-2 d-flex justify-content-end">4.8</p>
                                 </div>
                                 <div class="d-flex align-content-center justify-content-end">
                                     <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">{{ getCountry(destination.country).name }}</p>
+                                    <p class="card-text col">{{ country }}</p>
                                     <p class="card-text tachado mx-3">$950</p>
                                     <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="card discounts-carousel-card">
-                            <img src="../assets/img/firenze1.png" class="card-img-top rounded carousel-img" alt="Firenze"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Firenze</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.5</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">Italy</p>
-                                    <p class="card-text tachado mx-3">$850</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$750</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/paris1.png" class="card-img-top rounded carousel-img" alt="Paris"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Paris</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.4</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">France</p>
-                                    <p class="card-text tachado mx-3">$699</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$599</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/london1.png" class="card-img-top rounded carousel-img" alt="London"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">London</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.8</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">UK</p>
-                                    <p class="card-text tachado mx-3">$950</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
-                                </div>
-                            </div>
-                        </div> -->
+                        
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -156,37 +109,51 @@
 
 <script>
 import axios from 'axios';
+const plansUrl = 'http://localhost:8000/api/v1/plans/?format=json'
 const destinationsUrl = 'http://localhost:8000/api/v1/destinations/?format=json';
 const countriesUrl = 'http://localhost:8000/api/v1/countries/?format=json';
 
 export default {
     data() {
         return {
+            plans: [],
             destinations: [],
             countries: []
         }
     },
     mounted() {
-        this.getDestinations();
-        this.getCountries();
+        this.getPlansFromAPI();
+        this.getDestinationsFromAPI();
+        this.getCountriesFromAPI();
     },
     methods: {
-        getDestinations() {
-            axios.get(destinationsUrl)
+        getPlansFromAPI() {
+            axios.get(plansUrl)
                 .then( response => {
-                    console.log(response.data);
-                    this.destinations = response.data;
+                    this.plans = response.data;
                 } )
-                .catch( e => console.log('Error getting data from API: ', e));
+                .catch( e => console.log('Error getting plans from API: ', e));
         },
 
-        getCountries() {
+        getDestinationsFromAPI() {
+            axios.get(destinationsUrl)
+                .then( response => {
+                    this.destinations = response.data;
+                } )
+                .catch( e => console.log('Error getting destinations from API: ', e));
+        },
+
+        getCountriesFromAPI() {
             axios.get(countriesUrl)
                 .then( response => {
-                    console.log(response.data);
                     this.countries = response.data;
                 } )
-                .catch( e => console.log('Error getting data from API: ', e));
+                .catch( e => console.log('Error getting countries from API: ', e));
+        },
+
+        getDestinationFromPlan(desinationId) {
+            console.log('destinations loaded: ', this.destinations.length)
+            return this.destinations[desinationId-1];
         },
 
         getCountry(id) {
