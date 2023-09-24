@@ -5,19 +5,19 @@
                 <div class="carousel-item active">
                     <div class="card-wrapper container-sm d-flex justify-content-around">
                         
-                        <div class="card discounts-carousel-card" v-for="plan in plans.slice(0, 5)" :key="plan.id">
+                        <div class="card discounts-carousel-card" v-for="plan in plans.slice(0, 4)" :key="plan.id">
                             <img :src="getDestinationFromPlan(plan.destination).image" class="card-img-top rounded carousel-img" :alt="getDestinationFromPlan(plan.destination).name"/>
                             <div class="card-body">
                                 <div class="d-flex align-content-center justify-content-end">
                                     <h5 class="card-title col">{{ getDestinationFromPlan(plan.destination).name }}</h5>
                                     <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.8</p>
+                                    <p class="mx-2 d-flex justify-content-end">{{ getRating(plan.id) }}</p>
                                 </div>
                                 <div class="d-flex align-content-center justify-content-end">
                                     <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">{{ country }}</p>
-                                    <p class="card-text tachado mx-3">$950</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
+                                    <p class="card-text col">{{ getCountryFromDestination(plan.destination).name }}</p>
+                                    <p class="card-text tachado mx-3">${{ plan.previous_price }}</p>
+                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">${{ plan.price }}</b>
                                 </div>
                             </div>
                         </div>
@@ -26,70 +26,24 @@
                 </div>
                 <div class="carousel-item">
                     <div class="card-wrapper container-sm d-flex justify-content-around">
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/madrid1.png" class="card-img-top rounded carousel-img" alt="Madrid"/>
+                        
+                        <div class="card discounts-carousel-card" v-for="plan in plans.slice(4, 8)" :key="plan.id">
+                            <img :src="getDestinationFromPlan(plan.destination).image" class="card-img-top rounded carousel-img" :alt="getDestinationFromPlan(plan.destination).name"/>
                             <div class="card-body">
                                 <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Madrid</h5>
+                                    <h5 class="card-title col">{{ getDestinationFromPlan(plan.destination).name }}</h5>
                                     <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.8</p>
+                                    <p class="mx-2 d-flex justify-content-end">{{ getRating(plan.id) }}</p>
                                 </div>
                                 <div class="d-flex align-content-center justify-content-end">
                                     <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">Spain</p>
-                                    <p class="card-text tachado mx-3">$950</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
+                                    <p class="card-text col">{{ getCountryFromDestination(plan.destination).name }}</p>
+                                    <p class="card-text tachado mx-3">${{ plan.previous_price }}</p>
+                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">${{ plan.price }}</b>
                                 </div>
                             </div>
                         </div>
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/firenze1.png" class="card-img-top rounded carousel-img" alt="Firenze"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Firenze</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.5</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">Italy</p>
-                                    <p class="card-text tachado mx-3">$850</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$750</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/paris1.png" class="card-img-top rounded carousel-img" alt="Paris"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">Paris</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.4</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">France</p>
-                                    <p class="card-text tachado mx-3">$699</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$599</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card discounts-carousel-card">
-                            <img src="../assets/img/london1.png" class="card-img-top rounded carousel-img" alt="London"/>
-                            <div class="card-body">
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <h5 class="card-title col">London</h5>
-                                    <img src="../assets/img/starbg.png" alt="star" width="16px" class="h-50 mr-4 mt-1"/>
-                                    <p class="mx-2 d-flex justify-content-end">4.8</p>
-                                </div>
-                                <div class="d-flex align-content-center justify-content-end">
-                                    <i class="bi bi-geo-alt-fill locate-img"></i>
-                                    <p class="card-text col">UK</p>
-                                    <p class="card-text tachado mx-3">$950</p>
-                                    <b class="card-text precio h-50 w-25 d-flex justify-content-center">$850</b>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -112,19 +66,22 @@ import axios from 'axios';
 const plansUrl = 'http://localhost:8000/api/v1/plans/?format=json'
 const destinationsUrl = 'http://localhost:8000/api/v1/destinations/?format=json';
 const countriesUrl = 'http://localhost:8000/api/v1/countries/?format=json';
+const reviewsUrl = 'http://localhost:8000/api/v1/reviews/?format=json';
 
 export default {
     data() {
         return {
             plans: [],
             destinations: [],
-            countries: []
+            countries: [],
+            reviews: []
         }
     },
     mounted() {
         this.getPlansFromAPI();
         this.getDestinationsFromAPI();
         this.getCountriesFromAPI();
+        this.getReviewsFromAPI();
     },
     methods: {
         getPlansFromAPI() {
@@ -151,13 +108,38 @@ export default {
                 .catch( e => console.log('Error getting countries from API: ', e));
         },
 
+        getReviewsFromAPI() {
+            axios.get(reviewsUrl)
+                .then( response => {
+                    this.reviews = response.data;
+                } )
+                .catch( e => console.log('Error getting reviews from API: ', e));
+        },
+
         getDestinationFromPlan(desinationId) {
-            console.log('destinations loaded: ', this.destinations.length)
             return this.destinations[desinationId-1];
         },
 
-        getCountry(id) {
-            return this.countries[id-1];
+        getCountryFromDestination(destinationId) {
+            return this.countries[ this.getDestinationFromPlan(destinationId).country-1 ];
+        },
+
+        getRating(planId) {
+            const planReviews = this.reviews.filter(review => review.plan === planId);
+            const averageRating = this.calculateAverage(planReviews);
+            console.log(averageRating);
+            return averageRating;
+        },
+
+        calculateAverage(reviews) {
+            const n = reviews.length;
+            let sum = 0;
+            
+            for(let review of reviews) {
+                sum += review.rating;
+            }
+
+            return sum/n;
         }
 
     }
