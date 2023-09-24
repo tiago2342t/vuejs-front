@@ -6,6 +6,16 @@
                 <p class="prf">Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers!</p>
             </div>
 
+            <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end">
+                <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+
+                <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
             <div class="container d-flex justify-content-center">
                 <div id="plans-carousel" class="carousel carousel-dark slide d-none d-lg-block my-4" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -37,24 +47,19 @@
                     </div>
                 </div>
             </div>
-    
 
-            <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end">
-                <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel" data-bs-slide="prev">
-                    <i class="bi bi-arrow-left"></i>
-                </button>
-
-                <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel" data-bs-slide="next">
-                    <i class="bi bi-arrow-right"></i>
-                </button>
-            </div>
-
-            
+            <!-- Carrusel para pantallas pequeñas -->
+            <VacationPlanSmall/>
         </div>
     </section>
 </template>
 
+<script setup>
+    import VacationPlanSmall from './VacationPlanSmall.vue';
+</script>
+
 <script>
+
 import axios from 'axios';
 const plansUrl = 'http://localhost:8000/api/v1/plans/?format=json'
 const destinationsUrl = 'http://localhost:8000/api/v1/destinations/?format=json';
@@ -139,7 +144,6 @@ export default {
 
     }
 }
-
 </script>
 
 <style scoped>
