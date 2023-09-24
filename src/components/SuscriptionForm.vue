@@ -9,44 +9,12 @@
                 deals & offer
             </h3>
             <form>
-                <div
-                    class="d-flex mx-auto align-items-center mb-4"
-                    id="email-field"
-                >
-                    <svg
-                        class="ms-3 me-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="19"
-                        height="16"
-                        viewBox="0 0 19 16"
-                        fill="none"
-                    >
-                        <path
-                            d="M3.55566 5.33301L8.289 8.88301C8.64455 9.14967 9.13344 9.14967 9.489 8.88301L14.2223 5.33301"
-                            stroke="#999999"
-                            stroke-linecap="round"
-                        />
-                        <rect
-                            x="0.5"
-                            y="0.5"
-                            width="17.6667"
-                            height="15"
-                            rx="4.5"
-                            stroke="#999999"
-                        />
-                    </svg>
-                    <input
-                        type="email"
-                        class="col"
-                        id="email-input"
-                        placeholder="Enter your mail"
-                    />
-                    <input
-                        type="button"
-                        class="ms-3 me-2 py-1 px-2"
-                        id="subscribe-btn"
-                        value="Subscribe"
-                    />
+                <div class="input-group justify-content-center align-items-center" id="email-field">
+                    <i class="bi bi-envelope px-2"></i>
+                    <input type="text" id="email-input" class="form-control border-0 py-1 px-2" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="ms-3 me-2 py-1 px-2" id="subscribe-btn" type="button">Subscribe</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -78,20 +46,21 @@
     width: 60%;
     height: 3.5rem;
     border-radius: 0.6rem;
+    margin: auto;
+    justify-content: space-around;
 }
 
-#email-input {
-    border: none;
+#email-field i, #email-input {
     color: #999;
 }
+
 
 #subscribe-btn {
     border: none;
     border-radius: 0.5rem;
     background-color: #fa7436;
     color: white;
-    height: 75%;
-    width: 20%;
+    font-size: 1.2rem;
 }
 
 #subscribe-btn:hover {

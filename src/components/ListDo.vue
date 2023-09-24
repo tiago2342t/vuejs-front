@@ -49,35 +49,6 @@
     background-color: #f7f8fc;
 }
 
-.card-title, .centered-title {
-    font-weight: bold;
-    color: #222;
-}
-
-.centered-title {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 6vh;
-    text-align: center;
-}
-
-.card-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.resaltar {
-    color: #fa7436;
-}
-
-.prf {
-    color: #666;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 2.5vh;
-}
-
-.fila {
-    padding: 2.5rem 0 5rem;
-}
 
 .my-card {
     align-items: start;
@@ -88,9 +59,5 @@
     height: 50px;
     width: 50px;
     padding: 2.5vh 0 0 3vh;
-}
-
-.card-body {
-    padding: 3vh;
 }
 </style>

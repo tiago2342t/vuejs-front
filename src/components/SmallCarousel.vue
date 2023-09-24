@@ -98,11 +98,6 @@
 <script setup></script>
 
 <style scoped>
-p {
-    color: #666;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .discounts-carousel-card {
     height: auto;
     border-radius: 8px;
@@ -118,10 +113,6 @@ p {
 
 .carousel-img:hover {
     filter: brightness(50%);
-}
-
-.card-body {
-    padding: 3vh;
 }
 
 .card-title {
@@ -149,34 +140,5 @@ p {
 
 .slider-btn {
     border: none;
-}
-
-.flechas button {
-    background: white;
-    border: 1px solid #666;
-    border-radius: 50%;
-}
-
-.flechas button i {
-    color: #666;
-    font-size: 1.5rem;
-}
-
-.flechas button:hover {
-    background: #fa7436;
-    border: none;
-}
-
-.flechas button:hover i {
-    color: white;
-}
-
-.flechas button:active {
-    background-color: white;
-    border: none;
-}
-
-.flechas button:active i {
-    color: #fa7436;
 }
 </style>

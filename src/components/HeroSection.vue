@@ -28,13 +28,6 @@
 
 <script setup>
 import HeroCard from './HeroCard.vue';
-
-// export default {
-//     name: 'HeroSection',
-//     components: {
-//         HeroCard
-//     }
-// }
 </script>
 
 <style scoped>
@@ -44,21 +37,6 @@ import HeroCard from './HeroCard.vue';
 
 #hero-title {
     font-size: 8vh;
-}
-
-h1 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-    color: #222;
-}
-
-.resaltar {
-    color: #fa7436;
-}
-
-p {
-    color: #666;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #boton-hero {
