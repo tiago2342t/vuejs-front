@@ -58,12 +58,6 @@
     box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
 }
 
-.card-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #222;
-}
-
 .card-text {
     color: #666;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

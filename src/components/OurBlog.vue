@@ -93,30 +93,6 @@
     margin: -5rem 0 5rem 0;
 }
 
-.fila {
-    padding: 2.5rem 0 5rem;
-}
-
-.card-title, .centered-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #222;
-}
-
-.centered-title {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 6vh;
-    text-align: center;
-}
-
-.card-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.resaltar {
-    color: #fa7436;
-}
-
 .blog-card {
     height: 13rem;
     border: none !important;

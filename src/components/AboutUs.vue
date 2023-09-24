@@ -44,48 +44,4 @@
 #about-us {
     margin-top: -2.5rem;
 }
-
-h1 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-    color: #222;
-}
-
-.resaltar {
-    color: #fa7436;
-}
-
-p {
-    color: #666;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.flechas button {
-    background: white;
-    border: 1px solid #666;
-    border-radius: 50%;
-}
-
-.flechas button i {
-    color: #666;
-    font-size: 1.5rem;
-}
-
-.flechas button:hover {
-    background: #fa7436;
-    border: none;
-}
-
-.flechas button:hover i {
-    color: white;
-}
-
-.flechas button:active {
-    background-color: white;
-    border: none;
-}
-
-.flechas button:active i {
-    color: #fa7436;
-}
 </style>
