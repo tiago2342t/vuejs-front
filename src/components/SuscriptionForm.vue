@@ -9,7 +9,7 @@
                 deals & offer
             </h3>
             <form>
-                <div class="input-group justify-content-center align-items-center" id="email-field">
+                <div class="input-group justify-content-center align-items-center mb-4" id="email-field">
                     <i class="bi bi-envelope px-2"></i>
                     <input type="text" id="email-input" class="form-control border-0 py-1 px-2" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="basic-addon2">
                     <div class="input-group-append">
