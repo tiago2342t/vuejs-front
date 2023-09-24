@@ -52,7 +52,7 @@
                 <i class="bi bi-arrow-left"></i>
             </button>
 
-            <button class="btn slider-btn mx-2 my-3" type="button" data-bs-target="#discounts-carousel" data-bs-slide="next">
+            <button class="btn slider-btn mx-2 my-3" type="button" data-bs-target="#discounts-carousel-sm" data-bs-slide="next">
                 <i class="bi bi-arrow-right"></i>
             </button>
         </div>

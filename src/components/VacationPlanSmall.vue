@@ -1,5 +1,15 @@
 <template>
     <div>
+        <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end d-lg-none">
+            <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel-sm" data-bs-slide="prev">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel-sm" data-bs-slide="next">
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+
         <div class="container d-flex justify-content-center">
             <div id="plans-carousel-sm" class="carousel slide d-lg-none">
                 <div class="carousel-inner">
@@ -57,19 +67,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end d-lg-none">
-            <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel-sm" data-bs-slide="prev">
-                <i class="bi bi-arrow-left"></i>
-            </button>
-
-            <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel-sm" data-bs-slide="next">
-                <i class="bi bi-arrow-right"></i>
-            </button>
-        </div>
     </div>
     
-
 </template>
 
 <script>
@@ -171,61 +170,5 @@ export default {
 
 #vacation-plan .card-body {
     margin: 0.1rem;
-}
-
-.centered-title {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-weight: bold;
-    color: #222;
-    font-size: 6vh;
-    text-align: center;
-}
-
-.resaltar {
-    color: #fa7436;
-}
-
-p {
-    color: #666;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.prf {
-    text-align: center;
-    font-size: 2.5vh;
-}
-
-.card-title {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-}
-
-.flechas button {
-    background: white;
-    border: 1px solid #666;
-    border-radius: 50%;
-}
-
-.flechas button i {
-    color: #666;
-    font-size: 1.5rem;
-}
-
-.flechas button:hover {
-    background: #fa7436;
-    border: none;
-}
-
-.flechas button:hover i {
-    color: white;
-}
-
-.flechas button:active {
-    background-color: white;
-    border: none;
-}
-
-.flechas button:active i {
-    color: #fa7436;
 }
 </style>

@@ -6,7 +6,7 @@
                 <p class="prf">Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers!</p>
             </div>
 
-            <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end">
+            <div class="flechas d-flex gap-2 pt-3 pb-4 justify-content-end d-sm-none">
                 <button class="btn slider-btn" type="button" data-bs-target="#plans-carousel" data-bs-slide="prev">
                     <i class="bi bi-arrow-left"></i>
                 </button>
