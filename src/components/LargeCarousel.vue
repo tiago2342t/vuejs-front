@@ -126,8 +126,10 @@ export default {
 
         getRating(planId) {
             const planReviews = this.reviews.filter(review => review.plan === planId);
+
+            if(planReviews.length === 0) return 0.0;
+
             const averageRating = this.calculateAverage(planReviews);
-            console.log(averageRating);
             return averageRating;
         },
 

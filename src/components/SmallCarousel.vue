@@ -48,7 +48,7 @@
         </div>
 
         <div class="flechas d-flex justify-content-center">
-            <button class="btn slider-btn mx-3 my-3" type="button" data-bs-target="#discounts-carousel" data-bs-slide="prev">
+            <button class="btn slider-btn mx-3 my-3" type="button" data-bs-target="#discounts-carousel-sm" data-bs-slide="prev">
                 <i class="bi bi-arrow-left"></i>
             </button>
 
@@ -124,8 +124,10 @@ export default {
 
         getRating(planId) {
             const planReviews = this.reviews.filter(review => review.plan === planId);
+
+            if(planReviews.length === 0) return 0.0;
+
             const averageRating = this.calculateAverage(planReviews);
-            console.log(averageRating);
             return averageRating;
         },
 
